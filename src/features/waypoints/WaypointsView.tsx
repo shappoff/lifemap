@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useState } from "react";
 import {
   MapContainer,
   TileLayer,
@@ -10,16 +10,10 @@ import {
 } from "react-leaflet";
 import L from "leaflet";
 import { PersonSelect } from "@/components/biography/PersonSelect";
-import { PlaceTypeFilter } from "@/components/biography/PlaceTypeFilter";
 import { PlaceTypeBadge } from "@/components/biography/PlaceTypeBadge";
 import { AppShell } from "@/components/layout/AppShell";
-import { filterPlaces } from "@/lib/biography";
-import {
-  ALL_PLACE_TYPES,
-  formatDateRange,
-  PLACE_TYPE_COLORS,
-} from "@/lib/biography/labels";
-import type { Person, PlaceType } from "@/lib/biography/types";
+import { formatDateRange, PLACE_TYPE_COLORS } from "@/lib/biography/labels";
+import type { Person } from "@/lib/biography/types";
 import { useResolvedPerson } from "@/hooks/useResolvedPerson";
 import { withBasePath } from "@/lib/paths";
 import { LEAFLET_ATTRIBUTION, LEAFLET_TILE_URL } from "@/lib/map-styles";
@@ -52,13 +46,8 @@ function FitBounds({ places }: { places: { lat: number; lng: number }[] }) {
 
 export function WaypointsView({ people }: WaypointsViewProps) {
   const person = useResolvedPerson(people);
-  const [types, setTypes] = useState<PlaceType[]>([...ALL_PLACE_TYPES]);
   const [activeId, setActiveId] = useState<string | null>(null);
-
-  const visiblePlaces = useMemo(
-    () => filterPlaces(person.places, types),
-    [person.places, types],
-  );
+  const places = person.places;
 
   return (
     <AppShell
@@ -68,7 +57,6 @@ export function WaypointsView({ people }: WaypointsViewProps) {
       sidebar={
         <div className="flex flex-col gap-4 rounded-2xl border border-line bg-surface/95 p-4 shadow-sm">
           <PersonSelect people={people} personId={person.id} />
-          <PlaceTypeFilter selected={types} onChange={setTypes} />
           <p className="text-sm leading-relaxed text-ink/75">{person.bio}</p>
           <button
             type="button"
@@ -78,7 +66,7 @@ export function WaypointsView({ people }: WaypointsViewProps) {
             Показать все точки
           </button>
           <ul className="max-h-72 space-y-2 overflow-auto">
-            {visiblePlaces.map((place) => (
+            {places.map((place) => (
               <li key={place.id}>
                 <button
                   type="button"
@@ -109,8 +97,8 @@ export function WaypointsView({ people }: WaypointsViewProps) {
           className="h-full w-full"
         >
           <TileLayer attribution={LEAFLET_ATTRIBUTION} url={LEAFLET_TILE_URL} />
-          <FitBounds places={visiblePlaces} />
-          {visiblePlaces.map((place) => (
+          <FitBounds places={places} />
+          {places.map((place) => (
             <Marker
               key={place.id}
               position={[place.lat, place.lng]}

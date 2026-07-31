@@ -1,10 +1,5 @@
 import raw from "../../../data/biographies.json";
-import {
-  biographiesSchema,
-  type Place,
-  type PlaceType,
-  type Person,
-} from "./types";
+import { biographiesSchema, type Place, type Person } from "./types";
 
 const biographies = biographiesSchema.parse(raw);
 
@@ -23,15 +18,6 @@ export function getDefaultPerson(): Person {
 export function resolvePerson(personId?: string | null): Person {
   if (!personId) return getDefaultPerson();
   return getPerson(personId) ?? getDefaultPerson();
-}
-
-export function filterPlaces(
-  places: Place[],
-  types: PlaceType[] | null,
-): Place[] {
-  if (!types || types.length === 0) return places;
-  const set = new Set(types);
-  return places.filter((place) => set.has(place.type));
 }
 
 export function findPlace(person: Person, placeId: string): Place | undefined {

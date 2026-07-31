@@ -16,10 +16,6 @@ export const PLACE_TYPE_COLORS: Record<PlaceType, string> = {
   event: "#BE123C",
 };
 
-export const ALL_PLACE_TYPES = Object.keys(
-  PLACE_TYPE_LABELS,
-) as PlaceType[];
-
 export function formatDatePart(value: string): string {
   const [year, month] = value.split("-");
   if (!month) return year;
