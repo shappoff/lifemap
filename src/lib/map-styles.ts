@@ -1,9 +1,3 @@
-export const MAP_STYLE_POSITRON =
-  "https://basemaps.cartocdn.com/gl/positron-gl-style/style.json";
-
-export const MAP_STYLE_VOYAGER =
-  "https://basemaps.cartocdn.com/gl/voyager-gl-style/style.json";
-
 export const LEAFLET_TILE_URL =
   "https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png";
 

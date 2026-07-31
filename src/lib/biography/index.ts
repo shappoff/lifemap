@@ -2,7 +2,6 @@ import raw from "../../../data/biographies.json";
 import {
   biographiesSchema,
   type Place,
-  type PlaceFeatureCollection,
   type PlaceType,
   type Person,
 } from "./types";
@@ -33,34 +32,6 @@ export function filterPlaces(
   if (!types || types.length === 0) return places;
   const set = new Set(types);
   return places.filter((place) => set.has(place.type));
-}
-
-export function sortByStoryOrder(places: Place[]): Place[] {
-  return [...places].sort((a, b) => a.storyOrder - b.storyOrder);
-}
-
-export function sortByDate(places: Place[]): Place[] {
-  return [...places].sort((a, b) => a.dateStart.localeCompare(b.dateStart));
-}
-
-export function toGeoJSON(
-  places: Place[],
-  personId: string,
-): PlaceFeatureCollection {
-  return {
-    type: "FeatureCollection",
-    features: places.map((place) => ({
-      type: "Feature",
-      geometry: {
-        type: "Point",
-        coordinates: [place.lng, place.lat],
-      },
-      properties: {
-        ...place,
-        personId,
-      },
-    })),
-  };
 }
 
 export function findPlace(person: Person, placeId: string): Place | undefined {

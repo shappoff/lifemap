@@ -1,13 +1,10 @@
 # Life Map
 
-Статический сайт на Next.js с четырьмя режимами просмотра биографий на карте.
+Статический сайт на Next.js: биографии на карте в режиме Waypoints (Leaflet).
 
-## Режимы
+## Маршруты
 
-- `/explorer` — MapLibre, кластеры, фильтры, боковая панель
-- `/story` — scrollytelling с `flyTo` по главам
-- `/waypoints` — Leaflet, фото в попапах, слои типов
-- `/vitaemap` — карта + таймлайн с синхронизацией
+- `/` и `/waypoints` — карта с фото в попапах и фильтрами по типам мест
 
 Данные: [`data/biographies.json`](data/biographies.json).
 

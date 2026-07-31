@@ -16,7 +16,7 @@ const manrope = Manrope({
 export const metadata: Metadata = {
   title: "Life Map — биографии на карте",
   description:
-    "Четыре способа исследовать жизненный путь: Explorer, Story, Waypoints и VitaeMap.",
+    "Waypoints: исследуйте жизненный путь на карте с фото и фильтрами по типам мест.",
 };
 
 export default function RootLayout({

@@ -49,21 +49,3 @@ export type Place = z.infer<typeof placeSchema>;
 export type MapView = z.infer<typeof mapViewSchema>;
 export type Person = z.infer<typeof personSchema>;
 export type Biographies = z.infer<typeof biographiesSchema>;
-
-export type PlaceFeatureProperties = Place & {
-  personId: string;
-};
-
-export type PlaceFeature = {
-  type: "Feature";
-  geometry: {
-    type: "Point";
-    coordinates: [number, number];
-  };
-  properties: PlaceFeatureProperties;
-};
-
-export type PlaceFeatureCollection = {
-  type: "FeatureCollection";
-  features: PlaceFeature[];
-};

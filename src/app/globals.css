@@ -1,5 +1,4 @@
 @import "tailwindcss";
-@import "maplibre-gl/dist/maplibre-gl.css";
 
 :root {
   --background: #e9eef2;
@@ -42,7 +41,6 @@ h3,
   font-family: var(--font-fraunces), serif;
 }
 
-.maplibregl-popup-content,
 .leaflet-popup-content-wrapper {
   border-radius: 12px;
   font-family: var(--font-manrope), sans-serif;

@@ -64,7 +64,6 @@ export function WaypointsView({ people }: WaypointsViewProps) {
     <AppShell
       title="Waypoints"
       subtitle={person.name}
-      activeHref="/waypoints"
       personQuery={person.id}
       sidebar={
         <div className="flex flex-col gap-4 rounded-2xl border border-line bg-surface/95 p-4 shadow-sm">
