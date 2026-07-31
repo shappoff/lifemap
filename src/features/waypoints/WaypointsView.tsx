@@ -52,9 +52,9 @@ export function WaypointsView({ people }: WaypointsViewProps) {
   return (
     <AppShell
       sidebar={
-        <div className="flex flex-col gap-4 rounded-2xl border border-line bg-surface/95 p-4 shadow-sm lg:h-full lg:min-h-0">
+        <div className="flex h-full min-h-0 flex-col gap-4 rounded-2xl border border-line bg-surface/95 p-4 shadow-sm">
           <PersonSelect people={people} personId={person.id} />
-          <ul className="max-h-72 space-y-2 overflow-auto lg:max-h-none lg:min-h-0 lg:flex-1">
+          <ul className="min-h-0 flex-1 space-y-2 overflow-auto">
             {places.map((place) => (
               <li key={place.id}>
                 <button
@@ -77,7 +77,7 @@ export function WaypointsView({ people }: WaypointsViewProps) {
         </div>
       }
     >
-      <div className="h-[75vh] overflow-hidden rounded-2xl border border-line shadow-sm lg:h-full lg:min-h-0 lg:flex-1">
+      <div className="h-full min-h-0 overflow-hidden rounded-2xl border border-line shadow-sm">
         <MapContainer
           key={person.id}
           center={[person.defaultView.lat, person.defaultView.lng]}
