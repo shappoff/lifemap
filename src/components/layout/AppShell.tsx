@@ -1,43 +1,22 @@
-import Link from "next/link";
 import type { ReactNode } from "react";
 
 type AppShellProps = {
-  title: string;
-  subtitle?: string;
-  personQuery?: string;
   sidebar?: ReactNode;
   children: ReactNode;
 };
 
-export function AppShell({
-  title,
-  subtitle,
-  personQuery,
-  sidebar,
-  children,
-}: AppShellProps) {
-  const homeHref = personQuery ? `/?person=${personQuery}` : "/";
-
+export function AppShell({ sidebar, children }: AppShellProps) {
   return (
-    <div className="flex min-h-screen flex-col">
-      <header className="border-b border-line/80 bg-surface/90 backdrop-blur">
-        <div className="mx-auto flex w-full max-w-7xl flex-wrap items-center justify-between gap-4 px-4 py-3">
-          <div>
-            <Link href={homeHref} className="font-display text-lg text-ink">
-              Life Map
-            </Link>
-            <p className="text-sm text-ink/65">
-              {title}
-              {subtitle ? ` · ${subtitle}` : null}
-            </p>
-          </div>
-        </div>
-      </header>
-      <div className="mx-auto flex w-full max-w-7xl flex-1 flex-col gap-4 px-4 py-4 lg:flex-row">
+    <div className="flex min-h-svh flex-col lg:h-svh lg:overflow-hidden">
+      <div className="mx-auto flex min-h-0 w-full max-w-7xl flex-1 flex-col gap-4 px-4 py-4 lg:flex-row">
         {sidebar ? (
-          <aside className="w-full shrink-0 lg:w-80 xl:w-96">{sidebar}</aside>
+          <aside className="flex w-full shrink-0 flex-col lg:h-full lg:w-80 xl:w-96">
+            {sidebar}
+          </aside>
         ) : null}
-        <main className="min-h-[70vh] min-w-0 flex-1">{children}</main>
+        <main className="min-h-[70vh] min-w-0 flex-1 lg:flex lg:h-full lg:min-h-0 lg:flex-col">
+          {children}
+        </main>
       </div>
     </div>
   );

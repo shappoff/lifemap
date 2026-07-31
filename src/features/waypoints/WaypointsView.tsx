@@ -51,21 +51,10 @@ export function WaypointsView({ people }: WaypointsViewProps) {
 
   return (
     <AppShell
-      title="Waypoints"
-      subtitle={person.name}
-      personQuery={person.id}
       sidebar={
-        <div className="flex flex-col gap-4 rounded-2xl border border-line bg-surface/95 p-4 shadow-sm">
+        <div className="flex flex-col gap-4 rounded-2xl border border-line bg-surface/95 p-4 shadow-sm lg:h-full lg:min-h-0">
           <PersonSelect people={people} personId={person.id} />
-          <p className="text-sm leading-relaxed text-ink/75">{person.bio}</p>
-          <button
-            type="button"
-            className="rounded-lg bg-ink px-3 py-2 text-sm text-surface"
-            onClick={() => setActiveId(null)}
-          >
-            Показать все точки
-          </button>
-          <ul className="max-h-72 space-y-2 overflow-auto">
+          <ul className="max-h-72 space-y-2 overflow-auto lg:max-h-none lg:min-h-0 lg:flex-1">
             {places.map((place) => (
               <li key={place.id}>
                 <button
@@ -88,7 +77,7 @@ export function WaypointsView({ people }: WaypointsViewProps) {
         </div>
       }
     >
-      <div className="h-[75vh] overflow-hidden rounded-2xl border border-line shadow-sm">
+      <div className="h-[75vh] overflow-hidden rounded-2xl border border-line shadow-sm lg:h-full lg:min-h-0 lg:flex-1">
         <MapContainer
           key={person.id}
           center={[person.defaultView.lat, person.defaultView.lng]}
