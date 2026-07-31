@@ -1,0 +1,55 @@
+@import "tailwindcss";
+@import "maplibre-gl/dist/maplibre-gl.css";
+
+:root {
+  --background: #e9eef2;
+  --foreground: #14212b;
+  --surface: #f7fafc;
+  --surface-muted: #dfe7ee;
+  --ink: #0b1c24;
+  --accent: #0f6b63;
+  --accent-soft: #d7ebe8;
+  --line: #c5d0d8;
+  --map-frame: #0b1c24;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-surface: var(--surface);
+  --color-surface-muted: var(--surface-muted);
+  --color-ink: var(--ink);
+  --color-accent: var(--accent);
+  --color-accent-soft: var(--accent-soft);
+  --color-line: var(--line);
+  --font-sans: var(--font-manrope);
+  --font-display: var(--font-fraunces);
+}
+
+body {
+  background:
+    radial-gradient(circle at 12% 8%, rgba(15, 107, 99, 0.12), transparent 35%),
+    radial-gradient(circle at 88% 0%, rgba(29, 78, 216, 0.08), transparent 30%),
+    linear-gradient(180deg, #edf2f6 0%, var(--background) 45%, #dfe8ee 100%);
+  color: var(--foreground);
+  font-family: var(--font-manrope), sans-serif;
+}
+
+h1,
+h2,
+h3,
+.font-display {
+  font-family: var(--font-fraunces), serif;
+}
+
+.maplibregl-popup-content,
+.leaflet-popup-content-wrapper {
+  border-radius: 12px;
+  font-family: var(--font-manrope), sans-serif;
+}
+
+.leaflet-container {
+  width: 100%;
+  height: 100%;
+  font: inherit;
+}
