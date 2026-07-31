@@ -23,6 +23,21 @@
           "storyOrder": 1
         },
         {
+          "id": "pushkin-zakharovo",
+          "title": "Захарово",
+          "type": "home",
+          "lat": 55.645,
+          "lng": 36.968,
+          "dateStart": "1805",
+          "dateEnd": "1810",
+          "summary": "Подмосковное детство у бабушки.",
+          "description": "Летние месяцы Пушкин проводил в усадьбе Захарово у бабушки Марии Алексеевны Ганнибал. Здесь он впервые услышал народные сказки и песни, позже отозвавшиеся в его поэзии.",
+          "images": ["/photos/pushkin-zakharovo.svg"],
+          "tags": ["детство", "усадьба"],
+          "importance": 2,
+          "storyOrder": 2
+        },
+        {
           "id": "pushkin-lyceum",
           "title": "Царскосельский лицей",
           "type": "education",
@@ -35,7 +50,7 @@
           "images": ["/photos/pushkin-lyceum.svg"],
           "tags": ["лицей", "петербург"],
           "importance": 3,
-          "storyOrder": 2
+          "storyOrder": 3
         },
         {
           "id": "pushkin-spb",
@@ -50,22 +65,66 @@
           "images": ["/photos/pushkin-spb.svg"],
           "tags": ["служба", "поэзия"],
           "importance": 2,
-          "storyOrder": 3
+          "storyOrder": 4
         },
         {
-          "id": "pushkin-south",
-          "title": "Южная ссылка",
+          "id": "pushkin-caucasus",
+          "title": "Кавказ",
           "type": "travel",
-          "lat": 44.9521,
-          "lng": 34.1024,
-          "dateStart": "1820",
-          "dateEnd": "1824",
-          "summary": "Крым, Кавказ, Кишинёв, Одесса.",
-          "description": "После конфликта с властями Пушкин был отправлен на юг. Путешествия по Крыму и Кавказу, жизнь в Кишинёве и Одессе дали материал для «Кавказского пленника», «Бахчисарайского фонтана» и восточных мотивов.",
+          "lat": 43.5855,
+          "lng": 39.7231,
+          "dateStart": "1820-05",
+          "dateEnd": "1820-08",
+          "summary": "Первое путешествие на юг.",
+          "description": "Вместе с семьёй Раевских Пушкин проехал по Кавказу и Крыму. Впечатления от гор и восточного колорита легли в основу «Кавказского пленника» и ранних «южных» поэм.",
+          "images": ["/photos/pushkin-caucasus.svg"],
+          "tags": ["кавказ", "ссылка"],
+          "importance": 2,
+          "storyOrder": 5
+        },
+        {
+          "id": "pushkin-crimea",
+          "title": "Бахчисарай",
+          "type": "travel",
+          "lat": 44.7514,
+          "lng": 33.8628,
+          "dateStart": "1820-08",
+          "summary": "Ханский дворец и «Бахчисарайский фонтан».",
+          "description": "В Крыму Пушкин посетил Бахчисарайский дворец. Легенда о фонтане слёз и атмосфера ханской резиденции вдохновили поэму «Бахчисарайский фонтан».",
           "images": ["/photos/pushkin-crimea.svg"],
-          "tags": ["ссылка", "юг"],
+          "tags": ["крым", "поэма"],
+          "importance": 2,
+          "storyOrder": 6
+        },
+        {
+          "id": "pushkin-kishinev",
+          "title": "Кишинёв",
+          "type": "work",
+          "lat": 47.0105,
+          "lng": 28.8638,
+          "dateStart": "1820-09",
+          "dateEnd": "1823-07",
+          "summary": "Годы южной ссылки в Бессарабии.",
+          "description": "В Кишинёве Пушкин служил при канцелярии наместника Инзова. Здесь начата работа над «Евгением Онегиным», написаны «Гавриилиада» и многие лирические стихи.",
+          "images": ["/photos/pushkin-kishinev.svg"],
+          "tags": ["ссылка", "бессарабия"],
           "importance": 3,
-          "storyOrder": 4
+          "storyOrder": 7
+        },
+        {
+          "id": "pushkin-odessa",
+          "title": "Одесса",
+          "type": "work",
+          "lat": 46.4825,
+          "lng": 30.7233,
+          "dateStart": "1823-07",
+          "dateEnd": "1824-07",
+          "summary": "Канцелярия Воронцова и светский круг.",
+          "description": "Переведённый в Одессу, Пушкин служил при графе Воронцове. Городской свет, морской порт и конфликты с начальством завершились новой ссылкой — в Михайловское.",
+          "images": ["/photos/pushkin-odessa.svg"],
+          "tags": ["одесса", "ссылка"],
+          "importance": 2,
+          "storyOrder": 8
         },
         {
           "id": "pushkin-mikhailovskoye",
@@ -80,7 +139,22 @@
           "images": ["/photos/pushkin-mikhailovskoye.svg"],
           "tags": ["усадьба", "творчество"],
           "importance": 3,
-          "storyOrder": 5
+          "storyOrder": 9
+        },
+        {
+          "id": "pushkin-arzrum",
+          "title": "Арзрум",
+          "type": "travel",
+          "lat": 39.9055,
+          "lng": 41.2658,
+          "dateStart": "1829-06",
+          "dateEnd": "1829-07",
+          "summary": "Поход в Турцию и «Путешествие в Арзрум».",
+          "description": "Без разрешения властей Пушкин присоединился к армии Паскевича в Закавказье и дошёл до взятого Арзрума. Путевые заметки легли в основу «Путешествия в Арзрум».",
+          "images": ["/photos/pushkin-arzrum.svg"],
+          "tags": ["путешествие", "кавказ"],
+          "importance": 2,
+          "storyOrder": 10
         },
         {
           "id": "pushkin-boldino",
@@ -95,7 +169,21 @@
           "images": ["/photos/pushkin-boldino.svg"],
           "tags": ["болдино", "осень"],
           "importance": 3,
-          "storyOrder": 6
+          "storyOrder": 11
+        },
+        {
+          "id": "pushkin-wedding",
+          "title": "Москва — свадьба",
+          "type": "event",
+          "lat": 55.757,
+          "lng": 37.618,
+          "dateStart": "1831-02",
+          "summary": "Венчание с Натальей Гончаровой.",
+          "description": "18 февраля 1831 года в церкви Большого Вознесения у Никитских ворот Пушкин обвенчался с Натальей Николаевной Гончаровой. Семья вскоре переехала в Петербург.",
+          "images": ["/photos/pushkin-wedding.svg"],
+          "tags": ["свадьба", "москва"],
+          "importance": 2,
+          "storyOrder": 12
         },
         {
           "id": "pushkin-duel",
@@ -109,7 +197,22 @@
           "images": ["/photos/pushkin-duel.svg"],
           "tags": ["дуэль", "петербург"],
           "importance": 3,
-          "storyOrder": 7
+          "storyOrder": 13
+        },
+        {
+          "id": "pushkin-moika",
+          "title": "Мойка, 12",
+          "type": "home",
+          "lat": 59.941,
+          "lng": 30.3208,
+          "dateStart": "1836-09",
+          "dateEnd": "1837-01",
+          "summary": "Последняя квартира и смерть поэта.",
+          "description": "В доме Волконской на набережной Мойки Пушкин жил с семьёй в последний год. Сюда его привезли после дуэли; 29 января 1837 года здесь он скончался.",
+          "images": ["/photos/pushkin-moika.svg"],
+          "tags": ["петербург", "финал"],
+          "importance": 3,
+          "storyOrder": 14
         }
       ]
     },
@@ -181,19 +284,34 @@
           "storyOrder": 4
         },
         {
-          "id": "tolstoy-moscow",
-          "title": "Москва — семья и общество",
-          "type": "home",
-          "lat": 55.7342,
-          "lng": 37.5876,
-          "dateStart": "1882",
-          "dateEnd": "1901",
-          "summary": "Дом в Хамовниках.",
-          "description": "В московском доме в Хамовниках Толстые жили зимой. Здесь писатель общался с издателями, участвовал в общественной жизни и работал над поздними текстами.",
-          "images": ["/photos/tolstoy-moscow.svg"],
-          "tags": ["москва", "хамовники"],
+          "id": "tolstoy-petersburg",
+          "title": "Петербург — литературный круг",
+          "type": "work",
+          "lat": 59.9343,
+          "lng": 30.3351,
+          "dateStart": "1855",
+          "dateEnd": "1857",
+          "summary": "«Современник» и знакомство со столицей.",
+          "description": "После Крыма Толстой приехал в Петербург, вошёл в круг «Современника» и сблизился с Тургеневым, Некрасовым и другими литераторами. Здесь окончательно определился его писательский путь.",
+          "images": ["/photos/tolstoy-petersburg.svg"],
+          "tags": ["петербург", "литература"],
           "importance": 2,
           "storyOrder": 5
+        },
+        {
+          "id": "tolstoy-europe",
+          "title": "Париж и Европа",
+          "type": "travel",
+          "lat": 48.8566,
+          "lng": 2.3522,
+          "dateStart": "1857",
+          "dateEnd": "1861",
+          "summary": "Путешествия и размышления о педагогике.",
+          "description": "Толстой дважды ездил в Европу: видел Париж, Женеву, Германию и Англию. Европейский опыт и школы за границей повлияли на его педагогические идеи и школу в Ясной Поляне.",
+          "images": ["/photos/tolstoy-europe.svg"],
+          "tags": ["европа", "путешествие"],
+          "importance": 2,
+          "storyOrder": 6
         },
         {
           "id": "tolstoy-war-peace",
@@ -208,7 +326,66 @@
           "images": ["/photos/tolstoy-writing.svg"],
           "tags": ["роман", "творчество"],
           "importance": 3,
-          "storyOrder": 6
+          "storyOrder": 7
+        },
+        {
+          "id": "tolstoy-anna",
+          "title": "Ясная Поляна — «Анна Каренина»",
+          "type": "work",
+          "lat": 54.077,
+          "lng": 37.5245,
+          "dateStart": "1873",
+          "dateEnd": "1877",
+          "summary": "Роман о семье, страсти и обществе.",
+          "description": "В те же годы в Ясной Поляне Толстой писал «Анну Каренину». Семейная тема, нравственные поиски и картина русского общества 1870-х сделали роман одной из вершин мировой прозы.",
+          "images": ["/photos/tolstoy-anna.svg"],
+          "tags": ["роман", "творчество"],
+          "importance": 3,
+          "storyOrder": 8
+        },
+        {
+          "id": "tolstoy-samara",
+          "title": "Самарское имение",
+          "type": "travel",
+          "lat": 53.1959,
+          "lng": 50.1002,
+          "dateStart": "1871",
+          "dateEnd": "1891",
+          "summary": "Степь, кумыс и помощь голодающим.",
+          "description": "Толстой неоднократно жил в самарском имении: лечился кумысом, следил за хозяйством и в голодные годы организовывал помощь крестьянам. Степной край стал важной частью его поздней биографии.",
+          "images": ["/photos/tolstoy-samara.svg"],
+          "tags": ["самара", "помощь"],
+          "importance": 2,
+          "storyOrder": 9
+        },
+        {
+          "id": "tolstoy-moscow",
+          "title": "Москва — семья и общество",
+          "type": "home",
+          "lat": 55.7342,
+          "lng": 37.5876,
+          "dateStart": "1882",
+          "dateEnd": "1901",
+          "summary": "Дом в Хамовниках.",
+          "description": "В московском доме в Хамовниках Толстые жили зимой. Здесь писатель общался с издателями, участвовал в общественной жизни и работал над поздними текстами.",
+          "images": ["/photos/tolstoy-moscow.svg"],
+          "tags": ["москва", "хамовники"],
+          "importance": 2,
+          "storyOrder": 10
+        },
+        {
+          "id": "tolstoy-optina",
+          "title": "Оптина пустынь",
+          "type": "travel",
+          "lat": 54.0536,
+          "lng": 35.7772,
+          "dateStart": "1910-10",
+          "summary": "Остановка на пути ухода.",
+          "description": "Уйдя из Ясной Поляны, Толстой направился к Оптиной пустыни — монастырю, который давно привлекал его духовными исканиями. Отсюда путь продолжился к Шамордину и далее на юг.",
+          "images": ["/photos/tolstoy-optina.svg"],
+          "tags": ["монастырь", "уход"],
+          "importance": 2,
+          "storyOrder": 11
         },
         {
           "id": "tolstoy-astapovo",
@@ -222,7 +399,7 @@
           "images": ["/photos/tolstoy-astapovo.svg"],
           "tags": ["уход", "финал"],
           "importance": 3,
-          "storyOrder": 7
+          "storyOrder": 12
         }
       ]
     },
@@ -250,6 +427,36 @@
           "storyOrder": 1
         },
         {
+          "id": "hemingway-michigan",
+          "title": "Уоллун-Лейк, Мичиган",
+          "type": "home",
+          "lat": 45.2797,
+          "lng": -85.002,
+          "dateStart": "1900",
+          "dateEnd": "1921",
+          "summary": "Летний дом Windemere и рассказы о Нике Адамсе.",
+          "description": "Семья Хемингуэев проводила лета на озере Уоллун в северном Мичигане. Охота, рыбалка и лесные лагеря стали фоном цикла рассказов о Нике Адамсе.",
+          "images": ["/photos/hemingway-michigan.svg"],
+          "tags": ["мичиган", "детство"],
+          "importance": 2,
+          "storyOrder": 2
+        },
+        {
+          "id": "hemingway-kansas",
+          "title": "Канзас-Сити",
+          "type": "work",
+          "lat": 39.0997,
+          "lng": -94.5783,
+          "dateStart": "1917",
+          "dateEnd": "1918",
+          "summary": "Репортёр в Kansas City Star.",
+          "description": "Первая журналистская работа Хемингуэя — в газете Kansas City Star. Редакционный стиль газеты («короткие предложения, энергичный английский») повлиял на его прозу.",
+          "images": ["/photos/hemingway-kansas.svg"],
+          "tags": ["журналистика", "сша"],
+          "importance": 2,
+          "storyOrder": 3
+        },
+        {
           "id": "hemingway-italy",
           "title": "Италия — Первая мировая",
           "type": "event",
@@ -261,7 +468,22 @@
           "images": ["/photos/hemingway-italy.svg"],
           "tags": ["война", "италия"],
           "importance": 3,
-          "storyOrder": 2
+          "storyOrder": 4
+        },
+        {
+          "id": "hemingway-toronto",
+          "title": "Торонто",
+          "type": "work",
+          "lat": 43.6532,
+          "lng": -79.3832,
+          "dateStart": "1920",
+          "dateEnd": "1924",
+          "summary": "Корреспондент Toronto Star.",
+          "description": "Хемингуэй писал для Toronto Star — сначала из Канады, затем как европейский корреспондент. Газета дала ему стабильный заработок в годы становления как писателя.",
+          "images": ["/photos/hemingway-toronto.svg"],
+          "tags": ["журналистика", "канада"],
+          "importance": 1,
+          "storyOrder": 5
         },
         {
           "id": "hemingway-paris",
@@ -276,7 +498,7 @@
           "images": ["/photos/hemingway-paris.svg"],
           "tags": ["париж", "проза"],
           "importance": 3,
-          "storyOrder": 3
+          "storyOrder": 6
         },
         {
           "id": "hemingway-pamplona",
@@ -291,14 +513,14 @@
           "images": ["/photos/hemingway-pamplona.svg"],
           "tags": ["испания", "фиеста"],
           "importance": 2,
-          "storyOrder": 4
+          "storyOrder": 7
         },
         {
           "id": "hemingway-key-west",
           "title": "Ки-Уэст",
           "type": "home",
           "lat": 24.5551,
-          "lng": -81.7800,
+          "lng": -81.78,
           "dateStart": "1931",
           "dateEnd": "1939",
           "summary": "Дом во Флориде и морские рассказы.",
@@ -306,7 +528,22 @@
           "images": ["/photos/hemingway-keywest.svg"],
           "tags": ["флорида", "дом"],
           "importance": 2,
-          "storyOrder": 5
+          "storyOrder": 8
+        },
+        {
+          "id": "hemingway-africa",
+          "title": "Восточная Африка",
+          "type": "travel",
+          "lat": -1.2921,
+          "lng": 36.8219,
+          "dateStart": "1933",
+          "dateEnd": "1934",
+          "summary": "Сафари и «Зелёные холмы Африки».",
+          "description": "Первое африканское сафари Хемингуэя прошло в Кении и Танганьике. Охота, пейзажи и дневниковые записи легли в основу «Зелёных холмов Африки» и поздних африканских текстов.",
+          "images": ["/photos/hemingway-africa.svg"],
+          "tags": ["африка", "путешествие"],
+          "importance": 2,
+          "storyOrder": 9
         },
         {
           "id": "hemingway-madrid",
@@ -321,7 +558,7 @@
           "images": ["/photos/hemingway-madrid.svg"],
           "tags": ["испания", "война"],
           "importance": 3,
-          "storyOrder": 6
+          "storyOrder": 10
         },
         {
           "id": "hemingway-cuba",
@@ -336,7 +573,22 @@
           "images": ["/photos/hemingway-cuba.svg"],
           "tags": ["куба", "нобель"],
           "importance": 3,
-          "storyOrder": 7
+          "storyOrder": 11
+        },
+        {
+          "id": "hemingway-london",
+          "title": "Лондон — Вторая мировая",
+          "type": "event",
+          "lat": 51.5074,
+          "lng": -0.1278,
+          "dateStart": "1944",
+          "dateEnd": "1945",
+          "summary": "Военный корреспондент в Европе.",
+          "description": "Во время Второй мировой Хемингуэй освещал войну из Лондона и Франции. Он был рядом с высадкой в Нормандии и освобождением Парижа — опыт, отразившийся в поздних текстах и письмах.",
+          "images": ["/photos/hemingway-london.svg"],
+          "tags": ["война", "лондон"],
+          "importance": 2,
+          "storyOrder": 12
         },
         {
           "id": "hemingway-idaho",
@@ -350,7 +602,7 @@
           "images": ["/photos/hemingway-idaho.svg"],
           "tags": ["айдахо", "финал"],
           "importance": 3,
-          "storyOrder": 8
+          "storyOrder": 13
         }
       ]
     }
