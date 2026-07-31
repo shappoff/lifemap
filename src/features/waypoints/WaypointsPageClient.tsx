@@ -17,9 +17,9 @@ const WaypointsView = dynamic(
 );
 
 type WaypointsPageClientProps = {
-  people: Person[];
+  person: Person;
 };
 
-export function WaypointsPageClient({ people }: WaypointsPageClientProps) {
-  return <WaypointsView people={people} />;
+export function WaypointsPageClient({ person }: WaypointsPageClientProps) {
+  return <WaypointsView person={person} />;
 }

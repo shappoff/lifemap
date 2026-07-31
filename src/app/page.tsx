@@ -1,6 +1,6 @@
-import { getAllPeople } from "@/lib/biography";
+import { getDefaultPerson } from "@/lib/biography";
 import { WaypointsPageClient } from "@/features/waypoints/WaypointsPageClient";
 
 export default function HomePage() {
-  return <WaypointsPageClient people={getAllPeople()} />;
+  return <WaypointsPageClient person={getDefaultPerson()} />;
 }

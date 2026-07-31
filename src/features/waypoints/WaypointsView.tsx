@@ -9,18 +9,16 @@ import {
   useMap,
 } from "react-leaflet";
 import L from "leaflet";
-import { PersonSelect } from "@/components/biography/PersonSelect";
 import { PlaceTypeBadge } from "@/components/biography/PlaceTypeBadge";
 import { AppShell } from "@/components/layout/AppShell";
 import { formatDateRange, PLACE_TYPE_COLORS } from "@/lib/biography/labels";
 import type { Person } from "@/lib/biography/types";
-import { useResolvedPerson } from "@/hooks/useResolvedPerson";
 import { withBasePath } from "@/lib/paths";
 import { LEAFLET_ATTRIBUTION, LEAFLET_TILE_URL } from "@/lib/map-styles";
 import "leaflet/dist/leaflet.css";
 
 type WaypointsViewProps = {
-  people: Person[];
+  person: Person;
 };
 
 function createDivIcon(color: string, active: boolean) {
@@ -44,8 +42,7 @@ function FitBounds({ places }: { places: { lat: number; lng: number }[] }) {
   return null;
 }
 
-export function WaypointsView({ people }: WaypointsViewProps) {
-  const person = useResolvedPerson(people);
+export function WaypointsView({ person }: WaypointsViewProps) {
   const [activeId, setActiveId] = useState<string | null>(null);
   const places = person.places;
 
@@ -53,7 +50,6 @@ export function WaypointsView({ people }: WaypointsViewProps) {
     <AppShell
       sidebar={
         <div className="flex h-full min-h-0 flex-col gap-4 rounded-2xl border border-line bg-surface/95 p-4 shadow-sm">
-          <PersonSelect people={people} personId={person.id} />
           <ul className="min-h-0 flex-1 space-y-2 overflow-auto">
             {places.map((place) => (
               <li key={place.id}>

@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import { Literata, Manrope } from "next/font/google";
-import { Suspense } from "react";
 import "./globals.css";
 
 const literata = Literata({
@@ -26,11 +25,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ru" className={`${literata.variable} ${manrope.variable} h-full`}>
-      <body className="min-h-full antialiased">
-        <Suspense fallback={<div className="p-6 text-sm text-ink/60">Загрузка…</div>}>
-          {children}
-        </Suspense>
-      </body>
+      <body className="min-h-full antialiased">{children}</body>
     </html>
   );
 }
